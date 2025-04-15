@@ -1,0 +1,11 @@
+D:\Users\pc\Desktop\RoadToM#\MSharp.MCInterop\bin\Debug\net9.0\MSharp.MCInterop.deps.json
+D:\Users\pc\Desktop\RoadToM#\MSharp.MCInterop\bin\Debug\net9.0\MSharp.MCInterop.dll
+D:\Users\pc\Desktop\RoadToM#\MSharp.MCInterop\bin\Debug\net9.0\MSharp.MCInterop.pdb
+D:\Users\pc\Desktop\RoadToM#\MSharp.MCInterop\obj\Debug\net9.0\MSharp.MCInterop.GeneratedMSBuildEditorConfig.editorconfig
+D:\Users\pc\Desktop\RoadToM#\MSharp.MCInterop\obj\Debug\net9.0\MSharp.MCInterop.AssemblyInfoInputs.cache
+D:\Users\pc\Desktop\RoadToM#\MSharp.MCInterop\obj\Debug\net9.0\MSharp.MCInterop.AssemblyInfo.cs
+D:\Users\pc\Desktop\RoadToM#\MSharp.MCInterop\obj\Debug\net9.0\MSharp.MCInterop.csproj.CoreCompileInputs.cache
+D:\Users\pc\Desktop\RoadToM#\MSharp.MCInterop\obj\Debug\net9.0\MSharp.MCInterop.dll
+D:\Users\pc\Desktop\RoadToM#\MSharp.MCInterop\obj\Debug\net9.0\refint\MSharp.MCInterop.dll
+D:\Users\pc\Desktop\RoadToM#\MSharp.MCInterop\obj\Debug\net9.0\MSharp.MCInterop.pdb
+D:\Users\pc\Desktop\RoadToM#\MSharp.MCInterop\obj\Debug\net9.0\ref\MSharp.MCInterop.dll

@@ -1,0 +1,15 @@
+D:\Users\pc\Desktop\RoadToM#\Mods#\Mods\MSharp.ModAPI.deps.json
+D:\Users\pc\Desktop\RoadToM#\Mods#\Mods\MSharp.ModAPI.dll
+D:\Users\pc\Desktop\RoadToM#\Mods#\Mods\MSharp.ModAPI.pdb
+D:\Users\pc\Desktop\RoadToM#\MSharp.ModAPI\obj\Release\net9.0\MSharp.ModAPI.csproj.AssemblyReference.cache
+D:\Users\pc\Desktop\RoadToM#\MSharp.ModAPI\obj\Release\net9.0\MSharp.ModAPI.GeneratedMSBuildEditorConfig.editorconfig
+D:\Users\pc\Desktop\RoadToM#\MSharp.ModAPI\obj\Release\net9.0\MSharp.ModAPI.AssemblyInfoInputs.cache
+D:\Users\pc\Desktop\RoadToM#\MSharp.ModAPI\obj\Release\net9.0\MSharp.ModAPI.AssemblyInfo.cs
+D:\Users\pc\Desktop\RoadToM#\MSharp.ModAPI\obj\Release\net9.0\MSharp.ModAPI.csproj.CoreCompileInputs.cache
+D:\Users\pc\Desktop\RoadToM#\MSharp.ModAPI\obj\Release\net9.0\MSharp.ModAPI.dll
+D:\Users\pc\Desktop\RoadToM#\MSharp.ModAPI\obj\Release\net9.0\refint\MSharp.ModAPI.dll
+D:\Users\pc\Desktop\RoadToM#\MSharp.ModAPI\obj\Release\net9.0\MSharp.ModAPI.pdb
+D:\Users\pc\Desktop\RoadToM#\MSharp.ModAPI\obj\Release\net9.0\ref\MSharp.ModAPI.dll
+D:\Users\pc\Desktop\RoadToM#\MSharp.ModAPI\bin\Release\net9.0\MSharp.ModAPI.deps.json
+D:\Users\pc\Desktop\RoadToM#\MSharp.ModAPI\bin\Release\net9.0\MSharp.ModAPI.dll
+D:\Users\pc\Desktop\RoadToM#\MSharp.ModAPI\bin\Release\net9.0\MSharp.ModAPI.pdb

@@ -1,0 +1,11 @@
+D:\Users\pc\Desktop\RoadToM#\MSharp.ModLoader\bin\Debug\net9.0\MSharp.ModLoader.deps.json
+D:\Users\pc\Desktop\RoadToM#\MSharp.ModLoader\bin\Debug\net9.0\MSharp.ModLoader.dll
+D:\Users\pc\Desktop\RoadToM#\MSharp.ModLoader\bin\Debug\net9.0\MSharp.ModLoader.pdb
+D:\Users\pc\Desktop\RoadToM#\MSharp.ModLoader\obj\Debug\net9.0\MSharp.ModLoader.GeneratedMSBuildEditorConfig.editorconfig
+D:\Users\pc\Desktop\RoadToM#\MSharp.ModLoader\obj\Debug\net9.0\MSharp.ModLoader.AssemblyInfoInputs.cache
+D:\Users\pc\Desktop\RoadToM#\MSharp.ModLoader\obj\Debug\net9.0\MSharp.ModLoader.AssemblyInfo.cs
+D:\Users\pc\Desktop\RoadToM#\MSharp.ModLoader\obj\Debug\net9.0\MSharp.ModLoader.csproj.CoreCompileInputs.cache
+D:\Users\pc\Desktop\RoadToM#\MSharp.ModLoader\obj\Debug\net9.0\MSharp.ModLoader.dll
+D:\Users\pc\Desktop\RoadToM#\MSharp.ModLoader\obj\Debug\net9.0\refint\MSharp.ModLoader.dll
+D:\Users\pc\Desktop\RoadToM#\MSharp.ModLoader\obj\Debug\net9.0\MSharp.ModLoader.pdb
+D:\Users\pc\Desktop\RoadToM#\MSharp.ModLoader\obj\Debug\net9.0\ref\MSharp.ModLoader.dll

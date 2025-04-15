@@ -1,0 +1,15 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+	  <TargetFramework>net9.0</TargetFramework>
+	  <OutputType>Library</OutputType>
+	  <Nullable>enable</Nullable>
+	</PropertyGroup>
+  
+	<ItemGroup>
+		<ProjectReference Include="..\MSharp.Launcher.Core\MSharp.Launcher.Core.csproj" />
+		<ProjectReference Include="..\MSharp.ModAPI\MSharp.ModAPI.csproj" />
+	  </ItemGroup>
+  
+  </Project>
+  
