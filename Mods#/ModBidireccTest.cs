@@ -19,11 +19,8 @@ namespace ModDeEjemplo
 		{
 			Console.WriteLine($"📨 Evento recibido desde Java: {type} | Payload: {payload}");
 
-			if (type == "BRIDGE_MSG")
-			{
-		
-				_bridge.Send($"ACK: {payload}");
-			}
+			if (type == "BRIDGE_MSG")  _bridge.Send($"ACK: {payload}");
+			
 		}
 
 

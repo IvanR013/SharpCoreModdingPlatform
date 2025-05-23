@@ -11,7 +11,7 @@ namespace MSharp.Launcher.Core.ModRunner
     {
         public static List<IMsharpMod> CargarMods(string ruta)
         {
-            var mods = new List<IMsharpMod>();
+            List<IMsharpMod> mods = [];
 
             if (!Directory.Exists(ruta))
             {
@@ -43,14 +43,9 @@ namespace MSharp.Launcher.Core.ModRunner
                 catch (ReflectionTypeLoadException ex)
                 {
                     Console.WriteLine($"❌ Error de tipos en {archivo}: {ex.Message}");
-					foreach (var loaderEx in ex.LoaderExceptions)
-					{
-                        if (loaderEx != null)
-                        {
-                            Console.WriteLine($"   - {loaderEx.Message}");
-                        }
-					}
-                       
+
+                    foreach (var loaderEx in ex.LoaderExceptions) if (loaderEx != null) Console.WriteLine($"   - {loaderEx.Message}");
+
                 }
                 catch (Exception ex)
                 {
