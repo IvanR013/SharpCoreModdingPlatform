@@ -23,9 +23,8 @@ namespace MSharp.Launcher.Core.ModRunner
             {
                 try
                 {
-                    var asm = Assembly.LoadFrom(archivo);
-                    var tipos = asm.GetTypes()
-                        .Where(t => typeof(IMsharpMod).IsAssignableFrom(t) && !t.IsInterface && !t.IsAbstract);
+                    Assembly? asm = Assembly.LoadFrom(archivo);
+                    IEnumerable<Type>? tipos = asm.GetTypes().Where(t => typeof(IMsharpMod).IsAssignableFrom(t) && !t.IsInterface && !t.IsAbstract);
 
                     foreach (var tipo in tipos)
                     {
