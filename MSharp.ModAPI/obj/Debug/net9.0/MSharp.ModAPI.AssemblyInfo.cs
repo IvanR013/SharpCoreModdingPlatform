@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("MSharp.ModAPI")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+690e27993758e1781514960fe024cd3e7b31068e")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+7d02de9330962bff54d921caf3d82c7dbdb827f8")]
 [assembly: System.Reflection.AssemblyProductAttribute("MSharp.ModAPI")]
 [assembly: System.Reflection.AssemblyTitleAttribute("MSharp.ModAPI")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
