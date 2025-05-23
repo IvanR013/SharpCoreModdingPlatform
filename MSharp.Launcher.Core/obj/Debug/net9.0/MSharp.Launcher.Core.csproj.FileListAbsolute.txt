@@ -1,0 +1,15 @@
+D:\Users\pc\Desktop\RoadToM#\MSharp.Launcher.Core\bin\Debug\net9.0\MSharp.Launcher.Core.deps.json
+D:\Users\pc\Desktop\RoadToM#\MSharp.Launcher.Core\bin\Debug\net9.0\MSharp.Launcher.Core.dll
+D:\Users\pc\Desktop\RoadToM#\MSharp.Launcher.Core\bin\Debug\net9.0\MSharp.Launcher.Core.pdb
+D:\Users\pc\Desktop\RoadToM#\MSharp.Launcher.Core\obj\Debug\net9.0\MSharp.Launcher.Core.GeneratedMSBuildEditorConfig.editorconfig
+D:\Users\pc\Desktop\RoadToM#\MSharp.Launcher.Core\obj\Debug\net9.0\MSharp.Launcher.Core.AssemblyInfoInputs.cache
+D:\Users\pc\Desktop\RoadToM#\MSharp.Launcher.Core\obj\Debug\net9.0\MSharp.Launcher.Core.AssemblyInfo.cs
+D:\Users\pc\Desktop\RoadToM#\MSharp.Launcher.Core\obj\Debug\net9.0\MSharp.Launcher.Core.csproj.CoreCompileInputs.cache
+D:\Users\pc\Desktop\RoadToM#\MSharp.Launcher.Core\obj\Debug\net9.0\MSharp.Launcher.Core.dll
+D:\Users\pc\Desktop\RoadToM#\MSharp.Launcher.Core\obj\Debug\net9.0\refint\MSharp.Launcher.Core.dll
+D:\Users\pc\Desktop\RoadToM#\MSharp.Launcher.Core\obj\Debug\net9.0\MSharp.Launcher.Core.pdb
+D:\Users\pc\Desktop\RoadToM#\MSharp.Launcher.Core\obj\Debug\net9.0\ref\MSharp.Launcher.Core.dll
+D:\Users\pc\Desktop\RoadToM#\MSharp.Launcher.Core\bin\Debug\net9.0\MSharp.ModAPI.dll
+D:\Users\pc\Desktop\RoadToM#\MSharp.Launcher.Core\bin\Debug\net9.0\MSharp.ModAPI.pdb
+D:\Users\pc\Desktop\RoadToM#\MSharp.Launcher.Core\obj\Debug\net9.0\MSharp.Launcher.Core.csproj.AssemblyReference.cache
+D:\Users\pc\Desktop\RoadToM#\MSharp.Launcher.Core\obj\Debug\net9.0\MSharp.L.A95A29B8.Up2Date
