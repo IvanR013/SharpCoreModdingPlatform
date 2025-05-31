@@ -9,6 +9,8 @@
 	<ItemGroup>
 		<ProjectReference Include="..\MSharp.Launcher.Core\MSharp.Launcher.Core.csproj" />
 		<ProjectReference Include="..\MSharp.ModAPI\MSharp.ModAPI.csproj" />
+
+		<Compile Include="ModBidireccTest.cs" />
 	  </ItemGroup>
   
   </Project>

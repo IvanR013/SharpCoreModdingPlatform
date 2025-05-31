@@ -15,6 +15,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MSharp.ModAPI", "MSharp.Mod
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MSharp.Testing", "MSharp.Testing\MSharp.Testing.csproj", "{B000226A-DDF6-4205-9D81-D3E2CB887B59}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mods#", "Mods#\Mods#.csproj", "{UN-GUID-NUEVO}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
