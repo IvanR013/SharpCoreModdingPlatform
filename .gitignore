@@ -28,3 +28,8 @@ out/
 .vscode/
 .idea/
 *.iml
+*.exe
+*.asc
+*.dll
+*.pdb
+*help.txt
