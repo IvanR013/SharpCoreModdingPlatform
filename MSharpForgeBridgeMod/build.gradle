@@ -31,13 +31,16 @@ repositories {
     mavenCentral()
 }
 
+dependencies {
+    compile  'org.json:json:20210307'
+}
+
 jar {
     manifest {
         attributes 'FMLCorePluginContainsMod': 'true'
     }
 }
 
-// 🔥 Aseguramos UTF-8 y compatibilidad Java 8
 compileJava {
     sourceCompatibility = '1.8'
     targetCompatibility = '1.8'
