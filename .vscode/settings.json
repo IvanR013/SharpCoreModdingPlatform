@@ -1,0 +1,11 @@
+{
+"java.configuration.runtimes": [
+  {
+    "name": "JavaSE-1.8",
+    "path": "D:/Users/pc/Desktop/Devtools/jdk8u442-b06",
+    "default": true
+  }
+],
+"java.compile.nullAnalysis.mode": "automatic"
+
+}
