@@ -1,8 +1,6 @@
-using System;
 using System.IO.Pipes;
 using System.Text;
-using System.Threading;
-using MSharp.Launcher.Core.Bridge;
+
 
 namespace MSharp.Launcher.Core.Bridge
 {
@@ -23,11 +21,11 @@ namespace MSharp.Launcher.Core.Bridge
         {
             listenThread = new Thread(() =>
             {
-                while (true) // Loop para esperar reconexiones
+                for(; ;) // Loop infinito al estilo programador de cpp pro para esperar reconexiones
                 {
                     try
                     {
-                        server = new NamedPipeServerStream(
+                        this.server = new NamedPipeServerStream(
                             pipeName,
                             PipeDirection.InOut,
                             1,
@@ -83,11 +81,13 @@ namespace MSharp.Launcher.Core.Bridge
             listenThread.Start();
         }
 
+
+
         public void Send(string message)
         {
             try
             {
-                if (server is { IsConnected: true })
+                if (server is { IsConnected: false })
                 {
                     byte[] buffer = Encoding.UTF8.GetBytes(message);
                     server.Write(buffer, 0, buffer.Length);

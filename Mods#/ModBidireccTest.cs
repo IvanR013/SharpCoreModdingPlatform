@@ -10,7 +10,7 @@ namespace ModDeEjemplo
 
 		public ModVioleta(IBridgeConnection bridge) => this._bridge = bridge;
 
-		public void OnStart() =>	Console.WriteLine("🟪 Mod Violeta iniciado.");
+		public void OnStart() =>  Console.WriteLine("🟪 Mod Violeta iniciado.");
 		
 
 		public void OnEvent(string type, object? payload = null)
@@ -20,8 +20,6 @@ namespace ModDeEjemplo
 			if (type == "BRIDGE_MSG")  _bridge.Send($"ACK: {payload}");
 			
 		}
-
-
 		public void OnTick() { }
 
 	}

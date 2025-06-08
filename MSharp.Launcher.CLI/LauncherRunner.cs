@@ -17,7 +17,7 @@ namespace MSharp.Launcher.Core
             var javaPath = @"D:\Users\pc\Desktop\Devtools\jdk8u442-b06\bin\java.exe";
             var mainClass = "net.minecraft.launchwrapper.Launch";
 
-            var vmArgs = "-Xmx2G -XX:+UnlockExperimentalVMOptions -XX:+UseG1GC " +
+            string vmArgs = "-Xmx2G -XX:+UnlockExperimentalVMOptions -XX:+UseG1GC " +
                          "-XX:G1NewSizePercent=20 -XX:G1ReservePercent=20 " +
                          "-XX:MaxGCPauseMillis=50 -XX:G1HeapRegionSize=32M";
 

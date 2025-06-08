@@ -1,10 +1,9 @@
 ﻿using MSharp.Launcher.Core;
 
-internal class Program
+class Program
 {
-    internal static void Main(string[] Argumentos)
+    static void Main()
     {
-
         LauncherRunner.EjecutarMinecraft();
     }
 }
