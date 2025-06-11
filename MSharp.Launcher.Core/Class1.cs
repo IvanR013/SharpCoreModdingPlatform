@@ -1,3 +1,0 @@
-﻿namespace MSharp.Launcher.Core;
-
-
