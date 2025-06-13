@@ -1,10 +1,10 @@
-# MSharp ModLoader: Modding C# para Minecraft
+# MSharpCore ModLoader: Modding C# para Minecraft
 
 ![Portada](Assets/PORTADA.jpg)
 
 ## ¿Qué es M#?
 
-**MSharp ModLoader** es un framework que permite crear mods para Minecraft (1.8.9 Forge, por ahora) usando **C#** y herramientas modernas como Visual Studio, integrando la lógica de los mods con el juego en tiempo real a través de un puente entre **Java** y **C#**.  
+**SharpCore ModLoader** es un framework que permite crear mods para Minecraft (1.8.9 Forge, por ahora) usando **C#** y herramientas modernas como Visual Studio, integrando la lógica de los mods con el juego en tiempo real a través de un puente entre **Java** y **C#**.  
 El objetivo es **democratizar el modding, hacerlo más accesible y moderno**.
 
 ---
