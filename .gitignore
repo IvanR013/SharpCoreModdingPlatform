@@ -35,7 +35,7 @@ obj/
 *.cache
 *.tmp
 .log
-
+*.txt
 # Ignorar archivos de usuario y configuración local
 *.user
 *.suo
