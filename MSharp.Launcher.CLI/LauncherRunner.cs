@@ -34,6 +34,7 @@ namespace MSharp.Launcher.Core
                             "--userProperties {} --userType mojang " +
                             "--tweakClass net.minecraftforge.fml.common.launcher.FMLTweaker";
 
+// Here we build the full command line to launch Minecraft with the specified settings 
             string launchArgs = $"{vmArgs} {javaArgs} -cp \"{classpath}\" {mainClass} {forgeArgs}";
 
             ProcessStartInfo psi = new ()
@@ -59,7 +60,7 @@ namespace MSharp.Launcher.Core
                 if (!string.IsNullOrEmpty(e.Data))  Console.WriteLine($"[ERR] {e.Data}");
             };
 
-            // 📦 Cargar mods C# (.dll)
+            // mod loader
             string modPath = @"D:\Users\pc\Desktop\RoadToM#\Mods#\Mods";
             Console.WriteLine("🔎 Cargando mods C# desde carpeta:");
             Console.WriteLine(modPath);
@@ -72,7 +73,7 @@ namespace MSharp.Launcher.Core
                 mod.OnStart();
             }
 
-            // 🔌 Conexión al mod de Java vía Named Pipe
+            // Conexión al mod de Java vía Named Pipe
             NamedPipeBridgeConnection bridge = new();
             bridge.OnMessage += msg =>
             {
