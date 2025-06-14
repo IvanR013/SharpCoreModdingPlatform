@@ -1,6 +1,5 @@
 # MSharpCore ModLoader: Modding C# para Minecraft
 
-![Portada](Assets/PORTADA.jpg)
 
 ## ¿Qué es M#?
 
