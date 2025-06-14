@@ -24,12 +24,44 @@ dist/
 build/
 out/
 
-# Ignore IDE and editor config files
-.vscode/
-.idea/
-*.iml
-*.exe
-*.asc
+# Ignorar binarios y compilados
+bin/
+obj/
 *.dll
+*.exe
 *.pdb
-*help.txt
+
+# Ignorar archivos de caché y temporales
+*.cache
+*.tmp
+.log
+
+# Ignorar archivos de usuario y configuración local
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+# Ignorar archivos de AssemblyInfo generados automáticamente
+*AssemblyInfo.cs
+*.xml
+*.dll
+
+
+
+# Ignorar carpetas de VS Code y Visual Studio
+.vscode/
+.vs/
+
+# Ignorar paquetes NuGet descargados
+packages/
+*.nupkg
+
+# Ignorar archivos de publicación
+publish/
+out/
+
+# ¡No ignores tus archivos de código fuente ni los .csproj/.sln!
+!*.cs
+!*.csproj
+!*.sln
