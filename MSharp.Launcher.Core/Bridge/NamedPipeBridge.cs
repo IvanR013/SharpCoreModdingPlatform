@@ -1,8 +1,8 @@
 using System.IO.Pipes;
 using System.Text;
 using System.Text.Json;
-using MSharp.Launcher.dummyInstructions;
 using MSharp.ModLoader.StagingSystem;
+using MSharp.Launcher.Core.Models;
 
 namespace MSharp.Launcher.Core.Bridge
 {
@@ -12,20 +12,27 @@ namespace MSharp.Launcher.Core.Bridge
         private NamedPipeServerStream? server;
         private Thread? listenThread;
 
-        private readonly StagingManager _stageManager = new(); // Manejador de staging para aplicar y revertir instrucciones
+        private readonly StagingManager<MSharpInstruction> _stageManager; // Manejador de staging para aplicar y revertir instrucciones
 
         public event Action<string>? OnMessage; // Esto queda por compatibilidad, pero ya no es el punto de entrada principal
 
         public NamedPipeBridgeConnection(string pipeName = "msharp_bridge")
         {
             this.pipeName = pipeName;
+
+            // Inicializamos el StagingManager con callbacks para aplicar y revertir instrucciones.
+            // Estos callbacks pueden ser adaptados para interactuar con tu lógica de modding.
+            _stageManager = new StagingManager<MSharpInstruction>(
+                applyCallback: instruction => Console.WriteLine($"Aplicando instrucción: {instruction.Tipo}"),
+                rollbackCallback: instruction => Console.WriteLine($"Revirtiendo instrucción: {instruction.Tipo}")
+            );
         }
 
         public void Start()
         {
             listenThread = new Thread(() =>
             {
-                while (true)
+                for (; ; )
                 {
                     try
                     {
@@ -112,19 +119,20 @@ namespace MSharp.Launcher.Core.Bridge
                     return;
                 }
 
-                _stageManager.Stage(payload);
+                _stageManager.MSadd(payload);
 
                 // Ejecutamos el adapter Java o cualquier otro
                 bool success = ExecuteInstruction(payload);
 
                 if (success)
                 {
-                    _stageManager.Commit(payload.Entidad);
+                    _stageManager.MScommit();
                     Console.WriteLine("✅ Instrucción aplicada y comiteada.");
+                    Console.WriteLine($"✅ Comiteado: {payload?.Tipo} - {payload?.Entidad}");
                 }
                 else
                 {
-                    _stageManager.Rollback(payload.Entidad);
+                    _stageManager.MSrevert();
                     Console.WriteLine("🔄 Instrucción fallida. Se hizo rollback.");
                 }
             }

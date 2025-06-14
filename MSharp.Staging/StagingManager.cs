@@ -1,4 +1,5 @@
 namespace MSharp.ModLoader.StagingSystem;
+
 public class StagingManager<T>
 {
 	private readonly Stack<T> _history = new();
@@ -14,7 +15,7 @@ public class StagingManager<T>
 
 	public void MSadd(T next)
 	{
-		if (_current is not null) _history.Push(_current);
+		if (_current != null) _history.Push(_current);
 
 		_current = next;
 
@@ -31,21 +32,19 @@ public class StagingManager<T>
 
 	public void MSrevert()
 	{
-		if (_history.Count > 0)
-		{
-			_current = _history.Pop();
-			_rollbackCallback(_current);
-		}
-		else
+		if (_history.Count == 0)
 		{
 			Console.WriteLine("[Staging] No hay versiones previas para hacer rollback.");
+			return;
 		}
+
+
+		_current = _history.Pop();
+		_rollbackCallback(_current);
 	}
 
-	public void MScommit()
-	{
-		_history.Clear(); // Confirmamos estado actual como final
-	}
+	public void MScommit() => _history.Clear(); // Confirmamos estado actual como final
+
 
 	public T? MSgetCurrent() => _current;
 }

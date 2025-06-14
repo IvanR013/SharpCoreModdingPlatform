@@ -17,6 +17,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MSharp.Testing", "MSharp.Te
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mods#", "Mods#\Mods#.csproj", "{UN-GUID-NUEVO}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MSharp.Staging", "MSharp.Staging\MSharp.Staging.csproj", "{312B3CD5-ED1B-426E-AE29-7EC6FA765EA0}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -50,5 +52,9 @@ Global
 		{B000226A-DDF6-4205-9D81-D3E2CB887B59}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B000226A-DDF6-4205-9D81-D3E2CB887B59}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B000226A-DDF6-4205-9D81-D3E2CB887B59}.Release|Any CPU.Build.0 = Release|Any CPU
+		{312B3CD5-ED1B-426E-AE29-7EC6FA765EA0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{312B3CD5-ED1B-426E-AE29-7EC6FA765EA0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{312B3CD5-ED1B-426E-AE29-7EC6FA765EA0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{312B3CD5-ED1B-426E-AE29-7EC6FA765EA0}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

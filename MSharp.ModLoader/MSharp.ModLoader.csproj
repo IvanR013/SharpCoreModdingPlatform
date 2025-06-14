@@ -6,4 +6,8 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\MSharp.ModAPI\MSharp.ModAPI.csproj" />
+    <ProjectReference Include="..\MSharp.Launcher.Core\MSharp.Launcher.Core.csproj" />
+  </ItemGroup>
 </Project>
