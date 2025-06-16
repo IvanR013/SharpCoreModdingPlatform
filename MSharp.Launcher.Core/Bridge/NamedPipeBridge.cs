@@ -1,6 +1,4 @@
 using System.IO.Pipes;
-using System.Text;
-using System.Text.Json;
 using MSharp.ModLoader.StagingSystem;
 using MSharp.Launcher.Core.Models;
 
@@ -14,7 +12,7 @@ namespace MSharp.Launcher.Core.Bridge
 
         private readonly StagingManager<MSharpInstruction> _stageManager; // Manejador de staging para aplicar y revertir instrucciones
 
-        public event Action<string>? OnMessage; // Esto queda por compatibilidad, pero ya no es el punto de entrada principal
+        public event Action<string> OnMessage; // Esto queda por compatibilidad, pero ya no es el punto de entrada principal
 
         public NamedPipeBridgeConnection(string pipeName = "msharp_bridge")
         {
@@ -32,7 +30,7 @@ namespace MSharp.Launcher.Core.Bridge
         {
             listenThread = new Thread(() =>
             {
-                for (; ; )
+                for (;;)
                 {
                     try
                     {
