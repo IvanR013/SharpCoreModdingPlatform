@@ -1,5 +1,4 @@
-﻿using System.Text.Json;
-using MSharp.ModLoader.StagingSystem;
+﻿using MSharp.ModLoader.StagingSystem;
 using MSharp.Validation.Models;
 using MSharp.Staging.Instruction_adapters;
 using MSharp.Validation;
@@ -24,7 +23,7 @@ public class InstructionProcessor
 	{
 		try
 		{
-			var result = _validator.Validate(json);
+			InstructionValidationResult result = _validator.Validate(json);
 			if (!result.IsValid) return result;
 
 			var instruction = JsonSerializer.Deserialize<MSharpInstruction>(json);

@@ -89,16 +89,16 @@ namespace MSharp.Launcher.Core.Bridge
         {
             try
             {
-                if (server is { IsConnected: true })
-                {
-                    byte[] buffer = Encoding.UTF8.GetBytes(message);
-                    server.Write(buffer, 0, buffer.Length);
-                    server.Flush();
-                }
-                else
+                if (server is { IsConnected: false })
                 {
                     Console.WriteLine("⚠️ No se puede enviar mensaje. No hay conexión.");
+                    return;
                 }
+
+                 byte[] buffer = Encoding.UTF8.GetBytes(message);
+                    server.Write(buffer, 0, buffer.Length);
+                    server.Flush();
+                
             }
             catch (Exception ex)
             {
@@ -117,22 +117,22 @@ namespace MSharp.Launcher.Core.Bridge
                     return;
                 }
 
-                _stageManager.MSadd(payload);
+                _stageManager.MSadd(payload); // lo añado al stage si es distinto de null
 
                 // Ejecutamos el adapter Java o cualquier otro
                 bool success = ExecuteInstruction(payload);
 
-                if (success)
-                {
-                    _stageManager.MScommit();
-                    Console.WriteLine("✅ Instrucción aplicada y comiteada.");
-                    Console.WriteLine($"✅ Comiteado: {payload?.Tipo} - {payload?.Entidad}");
-                }
-                else
+                if (!success)
                 {
                     _stageManager.MSrevert();
                     Console.WriteLine("🔄 Instrucción fallida. Se hizo rollback.");
+                    return;
                 }
+
+                _stageManager.MScommit();
+                Console.WriteLine("✅ Instrucción aplicada y comiteada.");
+                Console.WriteLine($"✅ Comiteado: {payload?.Tipo} - {payload?.Entidad}");
+
             }
             catch (Exception ex)
             {
@@ -140,6 +140,7 @@ namespace MSharp.Launcher.Core.Bridge
             }
         }
 
+// first point of contact for the adapter
         private bool ExecuteInstruction(MSharpInstruction payload)
         {
             try

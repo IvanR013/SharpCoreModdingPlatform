@@ -51,13 +51,12 @@ namespace MSharp.Launcher.Core
 
             proceso.OutputDataReceived += (s, e) =>
             {
-                if (!string.IsNullOrEmpty(e.Data))
-                    Console.WriteLine($"[OUT] {e.Data}");
+                if (!string.IsNullOrEmpty(e.Data)) Console.WriteLine($"[OUT] {e.Data}");
             };
 
             proceso.ErrorDataReceived += (s, e) =>
             {
-                if (!string.IsNullOrEmpty(e.Data))  Console.WriteLine($"[ERR] {e.Data}");
+                if (!string.IsNullOrEmpty(e.Data)) Console.WriteLine($"[ERR] {e.Data}");
             };
 
             // mod loader

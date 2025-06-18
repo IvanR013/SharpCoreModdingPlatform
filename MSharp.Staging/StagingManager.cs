@@ -25,7 +25,10 @@ public class StagingManager<T>
 		}
 		catch (Exception)
 		{
-			MSrevert(); // Automático
+			MSrevert(); // Automático por si la aplicación falla
+			Console.WriteLine("[Staging] Error al aplicar la instrucción. Se ha revertido el cambio.");
+			_current = null;
+			_history.Clear();
 			return;
 		}
 	}
@@ -46,5 +49,5 @@ public class StagingManager<T>
 	public void MScommit() => _history.Clear(); // Confirmamos estado actual como final
 
 
-	public T? MSgetCurrent() => _current;
+	public T? MSgetCurrent() => _current; // Devuelve el estado actual, o null si no hay ninguno - es como una memoria ram
 }
