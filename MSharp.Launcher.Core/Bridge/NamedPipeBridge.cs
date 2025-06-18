@@ -1,6 +1,7 @@
 using System.IO.Pipes;
 using MSharp.ModLoader.StagingSystem;
 using MSharp.Launcher.Core.Models;
+using MSharp.Staging.Instruction_adapters;
 
 namespace MSharp.Launcher.Core.Bridge
 {
@@ -10,13 +11,15 @@ namespace MSharp.Launcher.Core.Bridge
         private NamedPipeServerStream? server;
         private Thread? listenThread;
 
+        private readonly IInstructionAdapter _adapter; // Adapter para procesar instrucciones
         private readonly StagingManager<MSharpInstruction> _stageManager; // Manejador de staging para aplicar y revertir instrucciones
 
         public event Action<string> OnMessage; // Esto queda por compatibilidad, pero ya no es el punto de entrada principal
 
-        public NamedPipeBridgeConnection(string pipeName = "msharp_bridge")
+        public NamedPipeBridgeConnection(string pipeName = "msharp_bridge", IInstructionAdapter _adapter = null!)
         {
             this.pipeName = pipeName;
+            this._adapter = new FinishAdapterLayer("msharp_bridge");
 
             // Inicializamos el StagingManager con callbacks para aplicar y revertir instrucciones.
             // Estos callbacks pueden ser adaptados para interactuar con tu lógica de modding.
@@ -95,10 +98,10 @@ namespace MSharp.Launcher.Core.Bridge
                     return;
                 }
 
-                 byte[] buffer = Encoding.UTF8.GetBytes(message);
-                    server.Write(buffer, 0, buffer.Length);
-                    server.Flush();
-                
+                byte[] buffer = Encoding.UTF8.GetBytes(message);
+                server.Write(buffer, 0, buffer.Length);
+                server.Flush();
+
             }
             catch (Exception ex)
             {
@@ -140,22 +143,35 @@ namespace MSharp.Launcher.Core.Bridge
             }
         }
 
-// first point of contact for the adapter
+        // first point of contact for the adapter
         private bool ExecuteInstruction(MSharpInstruction payload)
         {
+            if (_adapter == null)
+            {
+                Console.WriteLine("⚠️ No hay adapter configurado.");
+                return false;
+            }
+
             try
             {
-                // 🔌 Este sería el "adapter" real → Lo podés redirigir al mod de Java, o a cualquier handler
-                Console.WriteLine($"▶️ Ejecutando {payload.Tipo} para entidad {payload.Entidad}");
+                var validationResult = _adapter.Validate(payload);
 
-                // Este método deberías adaptarlo a tu arquitectura real
-                // Simulación por ahora
-                return true;
+                if (validationResult == null || !validationResult.IsValid)
+                {
+                    Console.WriteLine($"❌ Instrucción inválida: {validationResult.ErrorMessage}");
+                    return false;
+                }
+
+                var result = _adapter.Apply(payload); // Acá se habla con Java mediante la implementacion de la interfaz IInstructionAdapter
+
+                return result;
             }
-            catch
+            catch (Exception ex)
             {
+                Console.WriteLine($"❌ Error en ExecuteInstruction: {ex.Message}");
                 return false;
             }
         }
+
     }
 }

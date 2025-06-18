@@ -6,7 +6,7 @@ namespace MinecraftLauncherCORE
     {
         public void LaunchVanilla(string javaPath, string gameJar, string mainClass, string args, string workingDirectory)
         {
-            var psi = new ProcessStartInfo
+            ProcessStartInfo psi = new()
             {
                 FileName = javaPath, // Ruta a java.exe
                 Arguments = $"-cp \"{gameJar}\" {mainClass} {args}",
@@ -17,7 +17,7 @@ namespace MinecraftLauncherCORE
                 CreateNoWindow = true,
             };
 
-            var process = new Process
+            Process prcss = new()
             {
                 StartInfo = psi
             };
@@ -34,9 +34,9 @@ namespace MinecraftLauncherCORE
                     Console.WriteLine($"[MINECRAFT STDERR] {e.Data}");
             };
 
-            process.Start();
-            process.BeginOutputReadLine();
-            process.BeginErrorReadLine();
+            prcss.Start();
+            prcss.BeginOutputReadLine();
+            prcss.BeginErrorReadLine();
         }
     }
 }

@@ -65,3 +65,5 @@ out/
 !*.cs
 !*.csproj
 !*.sln
+MSharp.ModAPI/obj/Debug/net9.0/MSharp.ModAPI.GlobalUsings.g.cs
+MSharp.Testing/obj/Debug/net9.0/MSharp.Testing.AssemblyInfo.cs
